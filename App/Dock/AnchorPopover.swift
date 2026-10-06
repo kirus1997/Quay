@@ -58,18 +58,38 @@ struct AnchorPopover<Content: View>: NSViewRepresentable {
                 if let popover, !popover.isShown, view.window != nil, view.bounds.width > 0 || view.bounds.height > 0 {
                     popover.show(relativeTo: view.bounds, of: view, preferredEdge: .maxY)
                 }
-            } else if let popover {
-                popover.delegate = nil
-                popover.performClose(nil)
-                self.popover = nil
-                hosting = nil
+                setHoldingDock(popover?.isShown == true)
+            } else {
+                setHoldingDock(false)
+                if let popover {
+                    popover.delegate = nil
+                    popover.performClose(nil)
+                    self.popover = nil
+                    hosting = nil
+                }
             }
         }
 
         func popoverDidClose(_ notification: Notification) {
+            setHoldingDock(false)
             popover = nil
             hosting = nil
             onDismiss?()
+        }
+
+        private var holdingDock = false
+
+        /// Keeps the dock on screen for the life of this popover. Balanced across show, outside-click, and explicit dismiss.
+        private func setHoldingDock(_ holding: Bool) {
+            guard holding != holdingDock else { return }
+            holdingDock = holding
+            Task { @MainActor in
+                if holding {
+                    QuayRuntime.shared.dockPanel?.popoverBegan()
+                } else {
+                    QuayRuntime.shared.dockPanel?.popoverEnded()
+                }
+            }
         }
     }
 }

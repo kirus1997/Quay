@@ -140,18 +140,49 @@ public struct DockConfiguration: Codable, Equatable, Sendable {
 
     public var schemaVersion: Int
     public var slots: [DockSlot]
+    /// When true, the dock slides off the main display until the pointer hits the bottom edge.
+    public var autoHides: Bool
 
-    public init(schemaVersion: Int = DockConfiguration.currentSchemaVersion, slots: [DockSlot]) {
+    public init(
+        schemaVersion: Int = DockConfiguration.currentSchemaVersion,
+        slots: [DockSlot],
+        autoHides: Bool = true
+    ) {
         self.schemaVersion = schemaVersion
         self.slots = slots
+        self.autoHides = autoHides
+    }
+
+    private enum CodingKeys: String, CodingKey {
+        case schemaVersion
+        case slots
+        case autoHides
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        schemaVersion = try container.decode(Int.self, forKey: .schemaVersion)
+        slots = try container.decode([DockSlot].self, forKey: .slots)
+        // Files saved before 0.1.1 omit the key. Auto-hide is the default.
+        autoHides = try container.decodeIfPresent(Bool.self, forKey: .autoHides) ?? true
+    }
+
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(schemaVersion, forKey: .schemaVersion)
+        try container.encode(slots, forKey: .slots)
+        try container.encode(autoHides, forKey: .autoHides)
     }
 
     public static func freshDefault() -> DockConfiguration {
-        DockConfiguration(slots: [
-            DockSlot(content: .widget(.nowPlaying)),
-            DockSlot(content: .widget(.timer)),
-            DockSlot(content: .widget(.upcomingEvents)),
-        ])
+        DockConfiguration(
+            slots: [
+                DockSlot(content: .widget(.nowPlaying)),
+                DockSlot(content: .widget(.timer)),
+                DockSlot(content: .widget(.upcomingEvents)),
+            ],
+            autoHides: true
+        )
     }
 
     public func hasWidget(_ kind: WidgetKind) -> Bool {

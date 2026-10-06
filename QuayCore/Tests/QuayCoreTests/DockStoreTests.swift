@@ -68,5 +68,18 @@ final class DockStoreTests: XCTestCase {
         try Data(body.utf8).write(to: url)
         let loaded = try XCTUnwrap(try DockStore(fileURL: url).load())
         XCTAssertEqual(loaded.slots.count, 1)
+        XCTAssertTrue(loaded.autoHides)
+    }
+
+    func testAutoHideFlagRoundTripsAndDefaultsOn() throws {
+        let url = directory.appendingPathComponent("dock.json")
+        var configuration = DockConfiguration(slots: [], autoHides: false)
+        let store = DockStore(fileURL: url)
+        try store.save(configuration)
+        XCTAssertEqual(try store.load()?.autoHides, false)
+
+        configuration.autoHides = true
+        try store.save(configuration)
+        XCTAssertEqual(try store.load()?.autoHides, true)
     }
 }

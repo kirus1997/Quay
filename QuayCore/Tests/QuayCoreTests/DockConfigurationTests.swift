@@ -5,6 +5,7 @@ final class DockConfigurationTests: XCTestCase {
     func testFreshDefaultHasOneOfEachWidget() {
         let configuration = DockConfiguration.freshDefault()
         XCTAssertEqual(configuration.schemaVersion, 1)
+        XCTAssertTrue(configuration.autoHides)
         XCTAssertEqual(
             configuration.slots.compactMap(\.widgetKind),
             [.nowPlaying, .timer, .upcomingEvents]
@@ -129,5 +130,6 @@ final class DockConfigurationTests: XCTestCase {
         """.data(using: .utf8)!
         let configuration = try QuayJSON.makeDecoder().decode(DockConfiguration.self, from: json)
         XCTAssertEqual(configuration.slots.first?.widgetKind, .timer)
+        XCTAssertTrue(configuration.autoHides)
     }
 }

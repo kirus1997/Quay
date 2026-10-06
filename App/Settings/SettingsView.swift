@@ -41,6 +41,13 @@ struct SettingsView: View {
             syncCollectionDraft()
         }
         .onAppear(perform: syncCollectionDraft)
+        .onChange(of: pickingApps) { _, open in
+            if open {
+                QuayRuntime.shared.dockPanel?.popoverBegan()
+            } else {
+                QuayRuntime.shared.dockPanel?.popoverEnded()
+            }
+        }
         .sheet(isPresented: $pickingApps) {
             AppPickerSheet(
                 isAdded: { path in
@@ -81,12 +88,30 @@ struct SettingsView: View {
     }
 
     private var dockPage: some View {
-        HStack(spacing: 0) {
-            slotList
+        VStack(spacing: 0) {
+            VStack(alignment: .leading, spacing: 2) {
+                Toggle("Automatically hide and show the dock", isOn: autoHides)
+                Text("Quay keeps a thin strip on the bottom edge of the main display and slides up when the pointer is there.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 10)
             Divider()
-            editor
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            HStack(spacing: 0) {
+                slotList
+                Divider()
+                editor
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
         }
+    }
+
+    private var autoHides: Binding<Bool> {
+        Binding(
+            get: { dock.configuration.autoHides },
+            set: { dock.setAutoHides($0) }
+        )
     }
 
     private var slotList: some View {

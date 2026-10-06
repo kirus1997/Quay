@@ -8,7 +8,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         runtime.timers.start()
         let panel = DockPanelController()
         runtime.dockPanel = panel
-        panel.show()
+        panel.start()
         runtime.bindWidgets()
         QuayActions.showDock = {
             QuayRuntime.shared.dockPanel?.show()

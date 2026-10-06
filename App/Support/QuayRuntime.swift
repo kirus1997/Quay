@@ -23,7 +23,9 @@ final class QuayRuntime {
     func bindWidgets() {
         dock.onChange = {
             Task { @MainActor in
-                QuayRuntime.shared.applyWidgetVisibility()
+                let runtime = QuayRuntime.shared
+                runtime.applyWidgetVisibility()
+                runtime.dockPanel?.noteConfigurationChanged()
             }
         }
         applyWidgetVisibility()

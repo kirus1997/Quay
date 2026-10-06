@@ -66,6 +66,10 @@ final class DockModel: ObservableObject {
         mutate { _ = $0.moveApps(inCollectionSlot: slotID, fromOffsets: offsets, toOffset: destination) }
     }
 
+    func setAutoHides(_ enabled: Bool) {
+        mutate { $0.autoHides = enabled }
+    }
+
     private func mutate(_ body: (inout DockConfiguration) -> Void) {
         var next = configuration
         body(&next)
