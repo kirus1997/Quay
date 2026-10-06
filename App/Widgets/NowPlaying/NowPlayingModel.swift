@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import QuayCore
 
 @MainActor
 final class NowPlayingModel: ObservableObject {

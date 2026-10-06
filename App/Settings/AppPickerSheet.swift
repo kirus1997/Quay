@@ -1,3 +1,4 @@
+import QuayCore
 import SwiftUI
 
 struct AppPickerSheet: View {

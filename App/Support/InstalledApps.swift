@@ -1,4 +1,5 @@
 import Foundation
+import QuayCore
 
 struct InstalledApp: Identifiable, Hashable {
     var name: String

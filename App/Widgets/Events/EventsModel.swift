@@ -1,6 +1,7 @@
 import Combine
 import EventKit
 import Foundation
+import QuayCore
 
 enum AgendaAccess: Equatable {
     case unknown

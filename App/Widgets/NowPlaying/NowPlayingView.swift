@@ -1,4 +1,5 @@
 import AppKit
+import QuayCore
 import SwiftUI
 
 struct NowPlayingView: View {
