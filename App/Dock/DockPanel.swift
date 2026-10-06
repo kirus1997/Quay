@@ -55,7 +55,7 @@ final class DockEdgeStripPanel: NSPanel {
     override var canBecomeMain: Bool { false }
 }
 
-final class DockHoverView: NSView {
+class DockHoverView: NSView {
     var onEntered: (() -> Void)?
     var onExited: (() -> Void)?
     private var tracking: NSTrackingArea?
