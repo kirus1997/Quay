@@ -191,7 +191,7 @@ final class DockPanelController: NSObject {
     private func pin(animated: Bool) {
         guard let screen = primaryScreen else { return }
         let frames = frames(on: screen)
-        strip.orderOut()
+        strip.orderOut(nil)
         panel.level = .floating
         panel.orderFrontRegardless()
         setDockFrame(nsRect(frames.resting), animated: animated)
