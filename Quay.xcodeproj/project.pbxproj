@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00000000A10000000000003A /* QuayCore in Frameworks */ = {isa = PBXBuildFile; productRef = 00000000A100000000000039 /* QuayCore */; };
+		00000000A10000000000003D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000005 /* Assets.xcassets */; };
+		00000000A10000000000003B /* QuayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000001 /* QuayApp.swift */; };
+		00000000A10000000000003C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000002 /* AppDelegate.swift */; };
+		00000000A10000000000003E /* QuayLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000006 /* QuayLog.swift */; };
+		00000000A10000000000003F /* QuayActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000007 /* QuayActions.swift */; };
+		00000000A100000000000040 /* QuayRuntime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000008 /* QuayRuntime.swift */; };
+		00000000A100000000000041 /* AppLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000009 /* AppLauncher.swift */; };
+		00000000A100000000000042 /* InstalledApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000000A /* InstalledApps.swift */; };
+		00000000A100000000000043 /* SystemSettingsLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000000B /* SystemSettingsLink.swift */; };
+		00000000A100000000000044 /* AppleScriptRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000000C /* AppleScriptRunner.swift */; };
+		00000000A100000000000045 /* UserInfoStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000000D /* UserInfoStrings.swift */; };
+		00000000A100000000000046 /* NotificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000000E /* NotificationPresenter.swift */; };
+		00000000A100000000000047 /* DockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000010 /* DockModel.swift */; };
+		00000000A100000000000048 /* DockPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000011 /* DockPanel.swift */; };
+		00000000A100000000000049 /* DockPanelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000012 /* DockPanelController.swift */; };
+		00000000A10000000000004A /* VisualEffectBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000013 /* VisualEffectBackground.swift */; };
+		00000000A10000000000004B /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000014 /* AppIconView.swift */; };
+		00000000A10000000000004C /* AnchorPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000015 /* AnchorPopover.swift */; };
+		00000000A10000000000004D /* CollectionPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000016 /* CollectionPopover.swift */; };
+		00000000A10000000000004E /* DockBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000017 /* DockBarView.swift */; };
+		00000000A10000000000004F /* PlaybackScripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000019 /* PlaybackScripts.swift */; };
+		00000000A100000000000050 /* NowPlayingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000001A /* NowPlayingModel.swift */; };
+		00000000A100000000000051 /* NowPlayingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000001B /* NowPlayingView.swift */; };
+		00000000A100000000000052 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000001D /* TimerModel.swift */; };
+		00000000A100000000000053 /* TimerWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A10000000000001E /* TimerWidgetView.swift */; };
+		00000000A100000000000054 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000020 /* EventsModel.swift */; };
+		00000000A100000000000055 /* EventsWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000021 /* EventsWidgetView.swift */; };
+		00000000A100000000000056 /* MenuBarContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000024 /* MenuBarContent.swift */; };
+		00000000A100000000000057 /* AppPickerSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000026 /* AppPickerSheet.swift */; };
+		00000000A100000000000058 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000A100000000000027 /* SettingsView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00000000A10000000000002A /* Quay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00000000A100000000000001 /* QuayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuayApp.swift; sourceTree = "<group>"; };
+		00000000A100000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00000000A100000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00000000A100000000000004 /* Quay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Quay.entitlements; sourceTree = "<group>"; };
+		00000000A100000000000005 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00000000A100000000000006 /* QuayLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuayLog.swift; sourceTree = "<group>"; };
+		00000000A100000000000007 /* QuayActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuayActions.swift; sourceTree = "<group>"; };
+		00000000A100000000000008 /* QuayRuntime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuayRuntime.swift; sourceTree = "<group>"; };
+		00000000A100000000000009 /* AppLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLauncher.swift; sourceTree = "<group>"; };
+		00000000A10000000000000A /* InstalledApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledApps.swift; sourceTree = "<group>"; };
+		00000000A10000000000000B /* SystemSettingsLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemSettingsLink.swift; sourceTree = "<group>"; };
+		00000000A10000000000000C /* AppleScriptRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleScriptRunner.swift; sourceTree = "<group>"; };
+		00000000A10000000000000D /* UserInfoStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoStrings.swift; sourceTree = "<group>"; };
+		00000000A10000000000000E /* NotificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationPresenter.swift; sourceTree = "<group>"; };
+		00000000A100000000000010 /* DockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockModel.swift; sourceTree = "<group>"; };
+		00000000A100000000000011 /* DockPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPanel.swift; sourceTree = "<group>"; };
+		00000000A100000000000012 /* DockPanelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockPanelController.swift; sourceTree = "<group>"; };
+		00000000A100000000000013 /* VisualEffectBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualEffectBackground.swift; sourceTree = "<group>"; };
+		00000000A100000000000014 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+		00000000A100000000000015 /* AnchorPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnchorPopover.swift; sourceTree = "<group>"; };
+		00000000A100000000000016 /* CollectionPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPopover.swift; sourceTree = "<group>"; };
+		00000000A100000000000017 /* DockBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockBarView.swift; sourceTree = "<group>"; };
+		00000000A100000000000019 /* PlaybackScripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackScripts.swift; sourceTree = "<group>"; };
+		00000000A10000000000001A /* NowPlayingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingModel.swift; sourceTree = "<group>"; };
+		00000000A10000000000001B /* NowPlayingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingView.swift; sourceTree = "<group>"; };
+		00000000A10000000000001D /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		00000000A10000000000001E /* TimerWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerWidgetView.swift; sourceTree = "<group>"; };
+		00000000A100000000000020 /* EventsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		00000000A100000000000021 /* EventsWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsWidgetView.swift; sourceTree = "<group>"; };
+		00000000A100000000000024 /* MenuBarContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContent.swift; sourceTree = "<group>"; };
+		00000000A100000000000026 /* AppPickerSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPickerSheet.swift; sourceTree = "<group>"; };
+		00000000A100000000000027 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00000000A10000000000002F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000A10000000000003A /* QuayCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00000000A10000000000002C = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000029 /* App */,
+				00000000A10000000000002B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		00000000A10000000000002B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A10000000000002A /* Quay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00000000A10000000000000F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000006 /* QuayLog.swift */,
+				00000000A100000000000007 /* QuayActions.swift */,
+				00000000A100000000000008 /* QuayRuntime.swift */,
+				00000000A100000000000009 /* AppLauncher.swift */,
+				00000000A10000000000000A /* InstalledApps.swift */,
+				00000000A10000000000000B /* SystemSettingsLink.swift */,
+				00000000A10000000000000C /* AppleScriptRunner.swift */,
+				00000000A10000000000000D /* UserInfoStrings.swift */,
+				00000000A10000000000000E /* NotificationPresenter.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000018 /* Dock */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000010 /* DockModel.swift */,
+				00000000A100000000000011 /* DockPanel.swift */,
+				00000000A100000000000012 /* DockPanelController.swift */,
+				00000000A100000000000013 /* VisualEffectBackground.swift */,
+				00000000A100000000000014 /* AppIconView.swift */,
+				00000000A100000000000015 /* AnchorPopover.swift */,
+				00000000A100000000000016 /* CollectionPopover.swift */,
+				00000000A100000000000017 /* DockBarView.swift */,
+			);
+			path = Dock;
+			sourceTree = "<group>";
+		};
+		00000000A10000000000001C /* NowPlaying */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000019 /* PlaybackScripts.swift */,
+				00000000A10000000000001A /* NowPlayingModel.swift */,
+				00000000A10000000000001B /* NowPlayingView.swift */,
+			);
+			path = NowPlaying;
+			sourceTree = "<group>";
+		};
+		00000000A10000000000001F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A10000000000001D /* TimerModel.swift */,
+				00000000A10000000000001E /* TimerWidgetView.swift */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000022 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000020 /* EventsModel.swift */,
+				00000000A100000000000021 /* EventsWidgetView.swift */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000023 /* Widgets */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A10000000000001C /* NowPlaying */,
+				00000000A10000000000001F /* Timer */,
+				00000000A100000000000022 /* Events */,
+			);
+			path = Widgets;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000025 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000024 /* MenuBarContent.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000028 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000026 /* AppPickerSheet.swift */,
+				00000000A100000000000027 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		00000000A100000000000029 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				00000000A100000000000001 /* QuayApp.swift */,
+				00000000A100000000000002 /* AppDelegate.swift */,
+				00000000A100000000000003 /* Info.plist */,
+				00000000A100000000000004 /* Quay.entitlements */,
+				00000000A100000000000005 /* Assets.xcassets */,
+				00000000A10000000000000F /* Support */,
+				00000000A100000000000018 /* Dock */,
+				00000000A100000000000023 /* Widgets */,
+				00000000A100000000000025 /* Menu */,
+				00000000A100000000000028 /* Settings */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00000000A100000000000030 /* Quay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00000000A100000000000032 /* Build configuration list for PBXNativeTarget "Quay" */;
+			buildPhases = (
+				00000000A10000000000002D /* Sources */,
+				00000000A10000000000002F /* Frameworks */,
+				00000000A10000000000002E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Quay;
+			packageProductDependencies = (
+				00000000A100000000000039 /* QuayCore */,
+			);
+			productName = Quay;
+			productReference = 00000000A10000000000002A /* Quay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00000000A100000000000031 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					00000000A100000000000030 = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 00000000A100000000000033 /* Build configuration list for PBXProject "Quay" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 00000000A10000000000002C;
+			packageReferences = (
+				00000000A100000000000038 /* XCLocalSwiftPackageReference "QuayCore" */,
+			);
+			productRefGroup = 00000000A10000000000002B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00000000A100000000000030 /* Quay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00000000A10000000000002E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000A10000000000003D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00000000A10000000000002D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00000000A10000000000003B /* QuayApp.swift in Sources */,
+				00000000A10000000000003C /* AppDelegate.swift in Sources */,
+				00000000A10000000000003E /* QuayLog.swift in Sources */,
+				00000000A10000000000003F /* QuayActions.swift in Sources */,
+				00000000A100000000000040 /* QuayRuntime.swift in Sources */,
+				00000000A100000000000041 /* AppLauncher.swift in Sources */,
+				00000000A100000000000042 /* InstalledApps.swift in Sources */,
+				00000000A100000000000043 /* SystemSettingsLink.swift in Sources */,
+				00000000A100000000000044 /* AppleScriptRunner.swift in Sources */,
+				00000000A100000000000045 /* UserInfoStrings.swift in Sources */,
+				00000000A100000000000046 /* NotificationPresenter.swift in Sources */,
+				00000000A100000000000047 /* DockModel.swift in Sources */,
+				00000000A100000000000048 /* DockPanel.swift in Sources */,
+				00000000A100000000000049 /* DockPanelController.swift in Sources */,
+				00000000A10000000000004A /* VisualEffectBackground.swift in Sources */,
+				00000000A10000000000004B /* AppIconView.swift in Sources */,
+				00000000A10000000000004C /* AnchorPopover.swift in Sources */,
+				00000000A10000000000004D /* CollectionPopover.swift in Sources */,
+				00000000A10000000000004E /* DockBarView.swift in Sources */,
+				00000000A10000000000004F /* PlaybackScripts.swift in Sources */,
+				00000000A100000000000050 /* NowPlayingModel.swift in Sources */,
+				00000000A100000000000051 /* NowPlayingView.swift in Sources */,
+				00000000A100000000000052 /* TimerModel.swift in Sources */,
+				00000000A100000000000053 /* TimerWidgetView.swift in Sources */,
+				00000000A100000000000054 /* EventsModel.swift in Sources */,
+				00000000A100000000000055 /* EventsWidgetView.swift in Sources */,
+				00000000A100000000000056 /* MenuBarContent.swift in Sources */,
+				00000000A100000000000057 /* AppPickerSheet.swift in Sources */,
+				00000000A100000000000058 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		00000000A100000000000034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00000000A100000000000035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		00000000A100000000000036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/Quay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirill.quay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+			};
+			name = Debug;
+		};
+		00000000A100000000000037 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = App/Quay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kirill.quay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00000000A100000000000033 /* Build configuration list for PBXProject "Quay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000A100000000000034 /* Debug */,
+				00000000A100000000000035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00000000A100000000000032 /* Build configuration list for PBXNativeTarget "Quay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00000000A100000000000036 /* Debug */,
+				00000000A100000000000037 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		00000000A100000000000038 /* XCLocalSwiftPackageReference "QuayCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = QuayCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		00000000A100000000000039 /* QuayCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 00000000A100000000000038 /* XCLocalSwiftPackageReference "QuayCore" */;
+			productName = QuayCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 00000000A100000000000031 /* Project object */;
+}
